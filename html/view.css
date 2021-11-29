@@ -1,0 +1,42 @@
+table tr td{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	font-size: large;
+}
+
+.class1{
+	background-color: rgb(255, 128, 128);
+}
+
+.class2{
+	background-color: rgb(128, 128, 255);
+}
+
+.class3{
+	background-color: rgb(128, 255, 128);
+}
+
+.class4{
+	background-color: rgb(255, 255, 128);
+}
+
+.class5{
+	background-color: pink;
+}
+
+.class6{
+	background-color:silver;
+}
+
+.class7{
+	background-color:gold;
+}
+
+.class8{
+	background-color:violet;
+}
+
+.class9{
+	background-color:cyan;
+}
