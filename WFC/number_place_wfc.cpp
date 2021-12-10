@@ -28,15 +28,14 @@ bool NumberPlaceWFC::init(){
     }
     
     // 変数の初期化
-    int r,c,p;
-    
-    for (r = 0; r<NumberPlace::ROW; ++r) {
-        for (c = 0; c<NumberPlace::COLUMN; ++c) {
-            for (p = 0; p<NumberPlace::POSSIBILITY; ++p) {
-                (this->num[r][c]).wave[p] = true;
-                (this->num[r][c]).entropy = 0.0;
-                (this->num[r][c]).isPropagated = false;
+    for (std::array<NumberPlace::square, NumberPlace::COLUMN> &row: this->num) {
+        for (NumberPlace::square &square: row) {
+            
+            for (bool &elem: square.wave) {
+                elem = true;
             }
+            square.entropy = 0.0;
+            square.isPropagated = false;
         }
     }
     
@@ -44,7 +43,7 @@ bool NumberPlaceWFC::init(){
 }
 
 
-void NumberPlaceWFC::update(){
+void NumberPlaceWFC::process(){
     
     std::ofstream writing_file;
     

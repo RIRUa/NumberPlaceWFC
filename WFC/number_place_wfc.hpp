@@ -59,7 +59,7 @@ public:
     ~NumberPlaceWFC();
     
     // 繰り返し処理（アルゴリズムの４）
-    void update();
+    void process();
     
     // 出力用関数（CUIに出力）
     void printCUI();
@@ -70,7 +70,7 @@ public:
     // 出力用関数（ファイルに出力）
     void printJsFile();
     
-//private:
+private:
     // 初期化関数（アルゴリズムの３）
     bool init();
     
